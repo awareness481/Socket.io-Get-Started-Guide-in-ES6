@@ -95,6 +95,21 @@ io.on('connection', (socket) => {
   });
 });
 ```
+- - - -
+Jquery
+```javascript
+socket.on('chat message', function(msg){
+  $('#messages').append($('<li>').text(msg));
+});
+```
+---> *ES6*
+```javascript
+socket.on('chat message', (msg) => {
+  const li = document.createElement('li');
+  li.appendChild(document.createTextNode(msg));
+  messages.appendChild(li);
+});
+```
 
 **Alternatively**, if you just want to run the app, follow these instructions:
 
