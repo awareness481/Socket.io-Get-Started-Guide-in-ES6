@@ -1,10 +1,12 @@
 This repo is a partial rewrite of the [get started guide](https://socket.io/get-started/chat/) in  which you can find in the socket.io homepage.
 
-In the code examples, the socket.io team is using jQuery. While that might simplify the code for others, it may make it hard for other users to understand what's happening. In my opinion, it is helpful to have the examples in plain Javascript.
+In the code examples, *the* socket.io *team is using Jquery*. While that might simplify the code for others, it may make it hard for other users to understand what's happening. In my opinion, it is helpful to have the examples in **plain Javascript**.
 
 Below you can see the code examples that socket.io provides, and an identical example in ES6 Javascript.
 
- -
+
+
+ Jquery
  ```javascript 
 io.on('connection', function(socket){  
    console.log('a user connected');  
@@ -13,6 +15,7 @@ io.on('connection', function(socket){
  });  
 });
 ```
+---> *ES6*
 ```javascript
 io.on('connection', (socket) => {
   console.log('a user connected'); 
@@ -21,7 +24,8 @@ io.on('connection', (socket) => {
   });
 });
 ```
--
+    
+Jquery
 ```javascript
 <script src="/socket.io/socket.io.js"></script>  
 <script src="https://code.jquery.com/jquery-1.11.1.js"></script>  
@@ -36,6 +40,7 @@ io.on('connection', (socket) => {
    });  
 </script>
 ```
+---> *ES6*
 ```javascript
 <script  src="/socket.io/socket.io.js"></script>
 
@@ -53,7 +58,8 @@ io.on('connection', (socket) => {
   });
 </script>
 ```
--
+     
+Jquery
 ```javascript
 io.on('connection', function(socket){  
    socket.on('chat message', function(msg){  
@@ -61,6 +67,7 @@ io.on('connection', function(socket){
   });  
 });
 ```
+---> *ES6*
 ```javascript
 io.on('connection', (socket) => {
   socket.on('chat message', (msg) => {
@@ -68,7 +75,8 @@ io.on('connection', (socket) => {
   });
 });
 ```
--
+    
+Jquery
 ```javascript
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
@@ -76,6 +84,7 @@ io.on('connection', function(socket){
   });
 });
 ```
+---> *ES6*
 ```javascript
 io.on('connection', (socket) => {
   socket.on('chat message', (msg) => {
@@ -86,10 +95,10 @@ io.on('connection', (socket) => {
 
 **Alternatively**, if you just want to run the app, follow these instructions:
 
- 1. Clone the repo
+ 1. Clone the repo    
    ```$ git clone https://github.com/awareness481/Socket.io-Get-Started-Guide-in-ES6.git```
- 2. Move to the right folder
+ 2. Move to the right folder    
    ```$ cd Socket.io-Get-Started-Guide-in-ES6```
- 3. Run app.js
+ 3. Run app.js    
   ```$ node app.js ```
 4. Visit localhost:3000
