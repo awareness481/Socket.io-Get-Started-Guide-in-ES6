@@ -31,7 +31,7 @@
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            socket.emit('chat message', m.value)
+            socket.emit('chat message', m.value);
             m.value = '';
             return false;
         });
